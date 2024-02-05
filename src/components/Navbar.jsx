@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { navLinks } from "../constants";
+import { navLinks } from "../Database/Data";
 import { styles } from "../styles";
 import logo from "../Images/logo.svg";
 import { HiMenu } from "react-icons/hi";

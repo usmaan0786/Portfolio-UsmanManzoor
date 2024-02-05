@@ -2,7 +2,7 @@ import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { services } from "../constants";
+import { services } from "../Database/Data";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const About = () => {
@@ -29,7 +29,7 @@ const About = () => {
         <div className="mt-[2rem] flex flex-wrap gap-10 justify-center">
           {services.map((service, index) => {
             return (
-              <Tilt>
+              <Tilt key={service.title}>
                 <motion.div
                   variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
                   className="p-[1px] rounded-[1rem] green-pink-gradient"
