@@ -4,6 +4,7 @@ import "./input.css";
 
 import herobg from "./Images/herobg.png";
 import Footer from "./components/Footer";
+import SideContact from "./components/SideContact";
 
 function App() {
   const backgroundImageStyle = {
@@ -21,12 +22,14 @@ function App() {
   return (
     <BrowserRouter>
       <div className="relative">
+        <div className="hidden lg:flex fixed mt-[20rem]">
+          <SideContact />
+        </div>
         <div style={backgroundImageStyle}></div>
         <div className="h-screen overflow-y">
           <Navbar />
           <Hero />
         </div>
-
         <About />
         <Tech />
         <Projects />

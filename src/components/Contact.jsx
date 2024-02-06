@@ -10,9 +10,9 @@ const Contact = () => {
   return (
     <>
       <div
-        className={`flex mt-[5rem] xl:flex-row lg:flex-col-reverse overflow-hidden justify-center`}
+        className={`flex mt-[5rem] lg:mt-[7rem] xl:flex-row flex-col-reverse overflow-hidden justify-center`}
       >
-        <div className="ml-[20rem]">
+        <div className="lg:ml-[20rem] mx-[1rem] lg:mx-0">
           <motion.div
             variants={slideIn("left", "tween", 0.2, 1)}
             className="flex-[0.75] bg-[#170b31] p-[2rem] rounded-2xl"
@@ -48,7 +48,7 @@ const Contact = () => {
                 <input
                   className=" p-3 rounded-lg text-white bg-[#281947]"
                   type="email"
-                  placeholder="Enter your web address"
+                  placeholder="Enter your email address"
                   name="fromEmail"
                   required
                   autoComplete="off"
@@ -62,7 +62,7 @@ const Contact = () => {
                   rows={"4"}
                   required
                 />
-                <button className="bg-gradient-to-b  from-[#67c2ff] to-[rgb(198,11,255)] w-max p-[1rem] rounded-xl px-[1.5rem] text-[1.2rem] font-medium hover:from-[#8faf54] hover:to-[rgb(121,182,41)] duration-200">Send</button>
+                <button className="bg-gradient-to-b  from-[#67c2ff] to-[rgb(198,11,255)] w-max lg:p-[.9rem] p-[.7rem] rounded-xl lg:px-[1.4rem] px-[1.2rem] lg:text-[1.1rem] text-[.9rem] font-medium hover:from-[#f6ff7a] hover:to-[rgb(121,182,41)] duration-200">Send</button>
               </form>
             </div>
           </motion.div>

@@ -8,7 +8,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 const About = () => {
   return (
     <>
-      <div className="lg:mx-[20rem]">
+      <div className="lg:mx-[20rem] mt-[5rem] lg:mt-0">
         <div className="px-[1rem] lg:px-0">
           <motion.div variants={textVariant()} className="">
             <p className={styles.sectionSubText}>Introduction</p>
@@ -16,7 +16,7 @@ const About = () => {
           </motion.div>
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
-            className="mt-4 text-[1rem]"
+            className="mt-4 lg:text-[1rem] text-[.9rem]"
           >
             I am a Skilled software Developer with Experience in typescript and
             javascript Experience in frameworks like react, nodejs and three.js
@@ -26,19 +26,19 @@ const About = () => {
           </motion.p>
         </div>
 
-        <div className="mt-[2rem] flex flex-wrap gap-10 justify-center">
+        <div className="mt-[2rem] flex flex-wrap lg:gap-10 gap-5 mx-[.5rem] lg:mx-0 justify-center">
           {services.map((service, index) => {
             return (
               <Tilt key={service.title}>
                 <motion.div
                   variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-                  className="p-[1px] rounded-[1rem] green-pink-gradient"
+                  className="rounded-[1rem] green-pink-gradient flex"
                 >
                   <div
                     options={{ max: 45, scale: 1, speed: 450 }}
-                    className="rounded-[1rem] lg:py-5 lg:px-12 px-[1rem] py-[1rem] flex flex-wrap justify-center h-[8rem] lg:h-[11rem] items-center"
+                    className="rounded-[1rem] lg:py-5 lg:px-12 px-[1rem] py-[1rem] flex flex-wrap justify-center w-[9rem] lg:w-[15rem] h-[7rem] lg:h-[10rem] items-center"
                   >
-                    <p className="text-white text-[1.1rem] lg:text-[1.3rem] font-bold text-center w-[10rem] my-[2rem]">
+                    <p className="text-white text-[.9rem] lg:text-[1.3rem] font-bold text-center w-[10rem] ">
                       {service.title}
                     </p>
                   </div>

@@ -1,25 +1,21 @@
-import React from "react";
-import { FaGithub } from "react-icons/fa";
+import React from 'react'
 import LinkedIn from "../Images/ContactMe/Linkedin.png";
 import Github from "../Images/ContactMe/github.png";
 import Insta from "../Images/ContactMe/instagram.png";
-const Footer = () => {
+
+const SideContact = () => {
   return (
-    <div className="mt-[5rem] bg-[#170b31] flex flex-col-reverse lg:flex-row items-center justify-center p-[2.5rem] gap-[2rem]">
-      <p className="font-medium text-[1.1rem] ml-[.7rem] lg:ml-0">
-        Usman Manzoor © {new Date().getFullYear()}
-      </p>
-      <div className="lg:hidden flex sm:flex flex-row gap-9 justify-center items-center">
+    <div className="flex flex-col ml-[1rem] gap-9 justify-center items-center">
         <a
           href="https://github.com/usmaan0786"
           target="_blank"
           rel="noopener noreferrer"
-          className=""
+          className="cursor-pointer"
         >
           <img
             src={Github}
             alt="Github"
-            className="w-[2.5rem] cursor-pointer opacity-80 hover:opacity-100 duration-150"
+            className="w-[2.5rem] "
           />
         </a>
 
@@ -27,29 +23,28 @@ const Footer = () => {
           href="https://www.linkedin.com/in/usman-manzoor-a4b89827a/"
           target="_blank"
           rel="noopener noreferrer"
-          className=""
+          className="cursor-pointer"
         >
           <img
             src={LinkedIn}
             alt="LinkedIn"
-            className="w-[2.5rem] cursor-pointer opacity-80 hover:opacity-100 duration-150"
+            className="w-[2.5rem] "
           />
         </a>
         <a
           href="    https://www.instagram.com/usman_.28/"
           target="_blank"
           rel="noopener noreferrer"
-          className=""
+          className="cursor-pointer"
         >
           <img
             src={Insta}
             alt="instagram"
-            className="w-[2.5rem] cursor-pointer opacity-80 hover:opacity-100 duration-150"
+            className="w-[2.5rem] "
           />
         </a>
       </div>
-    </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default SideContact
