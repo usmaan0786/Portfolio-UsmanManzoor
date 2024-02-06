@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
-import LinkedIn from "../Images/ContactMe/Linkedin.png";
+import LinkedIn from "../Images/ContactMe/linkedin.png";
 import Github from "../Images/ContactMe/github.png";
 import Insta from "../Images/ContactMe/instagram.png";
 const Footer = () => {
