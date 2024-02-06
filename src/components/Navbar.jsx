@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../Database/Data";
 import { styles } from "../styles";
-import logo from "../Images/logo.svg";
+import logo from "../Images/logo.png";
 import { HiMenu } from "react-icons/hi";
 import { IoIosClose } from "react-icons/io";
+import {animateScroll as scroll } from "react-scroll";
 
 const Navbar = () => {
   const { active, setActive } = useState("");
@@ -23,24 +24,24 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} className="w-[3rem] object-contain" />
+          <img src={logo} className="w-[4rem] object-contain" />
           <p className="text-[1.3rem] font-bold cursor-pointer">
-            Usman Manzoor <span className="sm: hidden">| Web Developer</span>
+            Usman Manzoor <span className="sm: hidden"> | Web Developer</span>
           </p>
         </Link>
         <ul className="list-none hidden  sm:flex flex-row gap-10">
           {navLinks.map((link) => {
             return (
-              <li
-                key={link.id}
-                className={`${
-                  active === link.title ? "text-white" : "text-[#bdbdbd]"
-                }
+                <li
+                  key={link.id}
+                  className={`${
+                    active === link.title ? "text-white" : "text-[#bdbdbd]"
+                  }
                 hover:text-white hover:scale-105  text-[1rem] font-medium cursor-pointer duration-100`}
-                onClick={() => setActive(link.title)}
-              >
-                <a href={`#${link.id}`}>{link.title}</a>
-              </li>
+                  onClick={() => setActive(link.title)}
+                >
+                  <a href={`${link.id}`}>{link.title}</a>
+                </li>
             );
           })}
         </ul>
@@ -61,7 +62,7 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 bg-[#12072e] border-[#ffffffcc] border-[.1rem] absolute top-20 right-3 mx-4 my-2 w-[10rem] rounded-lg`}
+            } p-6 bg-[#5c29ca] border-[#ffffffcc] border-[.1rem] absolute top-20 right-3 mx-4 my-2 w-[10rem] rounded-lg`}
           >
             {" "}
             <ul className="list-none flex items-start flex-col gap-7">
@@ -70,14 +71,14 @@ const Navbar = () => {
                   <li
                     key={link.id}
                     className={`${
-                      active === link.title ? "text-white" : "text-[#bdbdbd]"
+                      active === link.title ? "text-white" : ""
                     } hover:text-white text-[.9rem] font-medium cursor-pointer duration-100`}
                     onClick={() => {
                       setToggle(!toggle);
                       setActive(link.title);
                     }}
                   >
-                    <a href={`#${link.id}`}>{link.title}</a>
+                    <a href={`${link.id}`}>{link.title}</a>
                   </li>
                 );
               })}

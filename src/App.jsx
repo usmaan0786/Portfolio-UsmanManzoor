@@ -1,11 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import {
-  About,
-  Contact,
-  Hero,
-  Navbar,
-  Tech,
-} from "./components";
+import { About, Contact, Hero, Navbar, Tech, Projects } from "./components";
 import "./input.css";
 
 import herobg from "./Images/herobg.png";
@@ -20,16 +14,13 @@ function App() {
     left: 0,
     width: "100%",
     height: "100%",
-    zIndex: -1, // Ensure the background is behind other content
+    zIndex: -1
   };
 
   return (
     <BrowserRouter>
       <div className="relative">
-        {/* Background Image */}
         <div style={backgroundImageStyle}></div>
-
-        {/* Content */}
         <div className="h-screen overflow-y">
           <Navbar />
           <Hero />
@@ -37,10 +28,8 @@ function App() {
 
         <About />
         <Tech />
-        <div className="relative z-0">
-          <Contact />
-
-        </div>
+        <Projects />
+        <Contact />
       </div>
     </BrowserRouter>
   );

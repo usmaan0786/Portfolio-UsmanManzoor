@@ -1,5 +1,5 @@
-import react from "../Images/SkillsIcons/react.png"
-
+import react from "../Images/SkillsIcons/react.png";
+import login from "../Images/Projects/DynamicAuthPortal/login.png";
 
 export const navLinks = [
   {
@@ -34,85 +34,89 @@ export const services = [
 export const technologies = [
   {
     name: "HTML 5",
-    icon : react
+    icon: react,
   },
   {
     name: "CSS 3",
-    icon : react
+    icon: react,
   },
   {
     name: "JavaScript",
-    icon : react
+    icon: react,
   },
   {
     name: "HTML 5",
-    icon : react
+    icon: react,
   },
   {
     name: "CSS 3",
-    icon : react
+    icon: react,
   },
   {
     name: "JavaScript",
-    icon : react
+    icon: react,
   },
   {
     name: "HTML 5",
-    icon : react
+    icon: react,
   },
   {
     name: "CSS 3",
-    icon : react
+    icon: react,
   },
   {
     name: "JavaScript",
-    icon : react
+    icon: react,
   },
   {
     name: "HTML 5",
-    icon : react
+    icon: react,
   },
   {
     name: "CSS 3",
-    icon : react
+    icon: react,
   },
   {
     name: "JavaScript",
-    icon : react
+    icon: react,
   },
   {
     name: "HTML 5",
-    icon : react
+    icon: react,
   },
   {
     name: "CSS 3",
-    icon : react
+    icon: react,
   },
   {
     name: "JavaScript",
-    icon : react
-  }
+    icon: react,
+  },
 ];
 
 export const projects = [
   {
-    name: "CarRent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
+    name: "FYP-Class Based Image Editing",
+    category : "MERN",
+    description: `We have introduced an approach for image editing that operates on human specified labels. When presented with an input image along 
+    with labels, our model accurately follows these instructions to carry out edits.`,
+    bullets: [
       {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
+        point: `We have introduced an approach for image editing that operates on human specified labels. When presented with an input image along
+        with labels, our model accurately follows these instructions to carry out edits. To create our training dataset, we utilize Generative
+        Adversarial Networks (GANs), specifically employing Conditional GANs and CycleGANs models. In this project, our primary focus revolves
+        around manipulating colors, seamlessly transitioning between green, red, black, and blue tones. Our training dataset is composed of
+        approximately 3000 images for each color class, sourced from our e-commerce datasets. The models undergo training to adeptly edit
+        input images, generating precise and visually appealing outcomes. The editing process is guided by the conditioned label, ensuring a
+        personalized approach for each color—be it green, red, black, or blue.`,
       },
     ],
-    source_code_link: "https://github.com/",
-  }
+    src: login,
+    images: [
+      {
+        src: login,
+      },
+    ],
+    source_code: "https://github.com/usmaan0786/FYP-Class-Based-Image-Editing",
+  },
 ];

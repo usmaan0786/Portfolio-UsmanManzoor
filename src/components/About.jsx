@@ -36,9 +36,9 @@ const About = () => {
                 >
                   <div
                     options={{ max: 45, scale: 1, speed: 450 }}
-                    className="rounded-[1rem] lg:py-5 lg:px-12 px-[1rem] py-[1rem] flex  flex-wrap justify-center items-center"
+                    className="rounded-[1rem] lg:py-5 lg:px-12 px-[1rem] py-[1rem] flex flex-wrap justify-center h-[8rem] lg:h-[11rem] items-center"
                   >
-                    <p className="text-white text-[1.3rem] lg:text-[1.5rem] font-bold text-center w-[10rem] my-[2rem]">
+                    <p className="text-white text-[1.1rem] lg:text-[1.3rem] font-bold text-center w-[10rem] my-[2rem]">
                       {service.title}
                     </p>
                   </div>
