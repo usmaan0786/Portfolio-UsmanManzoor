@@ -3,6 +3,7 @@ import { About, Contact, Hero, Navbar, Tech, Projects } from "./components";
 import "./input.css";
 
 import herobg from "./Images/herobg.png";
+import Footer from "./components/Footer";
 
 function App() {
   const backgroundImageStyle = {
@@ -30,6 +31,7 @@ function App() {
         <Tech />
         <Projects />
         <Contact />
+        <Footer />
       </div>
     </BrowserRouter>
   );

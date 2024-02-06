@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { navLinks } from "../Database/Data";
 import { styles } from "../styles";
 import logo from "../Images/logo.png";
 import { HiMenu } from "react-icons/hi";
@@ -19,7 +18,7 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to={"/"}
-          className="flex items-center gap-2"
+          className="flex items-center gap-1"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
