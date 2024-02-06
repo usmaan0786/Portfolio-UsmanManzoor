@@ -1,23 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import logo from "../Images/logo.png";
 import { HiMenu } from "react-icons/hi";
 import { IoIosClose } from "react-icons/io";
-import { animateScroll as scroll } from "react-scroll";
 import { FaGithub } from "react-icons/fa";
+import { navLinks } from "../Database/Data";
 
 const Navbar = () => {
-  const { active, setActive } = useState("");
+  const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center fixed py-5 top-0 z-20 bg-transparent`}
+      className={`${
+        styles.paddingX
+      } w-screen flex items-center py-5 fixed top-0 z-10 bg-transparent`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
-          to={"/"}
+          to="/"
           className="flex items-center gap-1"
           onClick={() => {
             setActive("");
@@ -29,25 +46,24 @@ const Navbar = () => {
             Usman Manzoor <span className="sm: hidden"> | Web Developer</span>
           </p>
         </Link>
-        <div className="list-none hidden  sm:flex flex-row gap-10">
-          <a href="#" target="_blank" rel="noopener noreferrer" className="">
-            <FaGithub className=" text-[#e4e4e4] hover:text-white text-[2rem] cursor-pointer" />
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="">
-            <FaGithub className=" text-[#e4e4e4] hover:text-white text-[2rem] cursor-pointer" />
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="">
-            <FaGithub className=" text-[#e4e4e4] hover:text-white text-[2rem] cursor-pointer" />
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="">
-            <FaGithub className=" text-[#e4e4e4] hover:text-white text-[2rem] cursor-pointer" />
-          </a>
-        </div>
+        <ul className="list-none hidden sm:flex flex-row gap-10">
+          {navLinks.map((nav) => (
+            <li
+              key={nav.id}
+              className={`${
+                active === nav.title ? "text-[#ff9b9bcc]" : "text-[#ffffff]"
+              } hover:text-[#52a3ff] duration-100 text-[1rem] font-medium cursor-pointer`}
+              onClick={() => setActive(nav.title)}
+            >
+              <a href={`${nav.id}`}>{nav.title}</a>
+            </li>
+          ))}
+        </ul>
 
-        <div className="sm:hidden flex felx-1 justify-end items-center">
+        <div className="lg:hidden flex justify-between items-center">
           {toggle ? (
             <IoIosClose
-              className="text-[2rem] oject-contain cursor-pointer"
+              className="text-[2rem] object-contain cursor-pointer"
               onClick={() => setToggle(!toggle)}
             />
           ) : (
@@ -59,33 +75,27 @@ const Navbar = () => {
 
           <div
             className={`${
-              !toggle ? "hidden" : "flex flex-col items-center justify-center gap-y-[3rem]"
-            } p-6 bg-[#161616] border-[#ffffffcc] border-[.1rem] absolute top-20 right-3 mx-4 my-2 w-max h-max rounded-lg`}
+              !toggle
+                ? "hidden"
+                : "flex flex-col items-center justify-center gap-[5rem]"
+            } p-6 bg-[#170b31] border-[#ffffff] border-[.1rem] absolute top-20 right-[.5rem]  mx-4 my-2 w-max h-max rounded-lg`}
           >
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=""
-              >
-                <FaGithub className=" text-[#e4e4e4] hover:text-white text-[2rem] cursor-pointer" />
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=""
-              >
-                <FaGithub className=" text-[#e4e4e4] hover:text-white text-[2rem] cursor-pointer" />
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=""
-              >
-                <FaGithub className=" text-[#e4e4e4] hover:text-white text-[2rem] cursor-pointer" />
-              </a>
+            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-[2rem]">
+              {navLinks.map((nav) => (
+                <li
+                  key={nav.id}
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                    active === nav.title ? "text-white" : "text-secondary"
+                  }`}
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setActive(nav.title);
+                  }}
+                >
+                  <a href={`${nav.id}`}>{nav.title}</a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
