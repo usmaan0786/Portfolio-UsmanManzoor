@@ -97,13 +97,18 @@ export const technologies = [
 export const projects = [
   {
     name: "FYP-Class Based Image Editing",
-    category : "MERN",
+    Duration: "January 2023- December 2023",
+    TechStack: "Python, GANs, cGANs",
+    category: "MERN",
     description: `We have introduced an approach for image editing that operates on human specified labels. When presented with an input image along 
     with labels, our model accurately follows these instructions to carry out edits.`,
     bullets: [
       {
         point: `We have introduced an approach for image editing that operates on human specified labels. When presented with an input image along
-        with labels, our model accurately follows these instructions to carry out edits. To create our training dataset, we utilize Generative
+        with labels, our model accurately follows these instructions to carry out edits.`,
+      },
+      {
+        point: ` To create our training dataset, we utilize Generative
         Adversarial Networks (GANs), specifically employing Conditional GANs and CycleGANs models. In this project, our primary focus revolves
         around manipulating colors, seamlessly transitioning between green, red, black, and blue tones. Our training dataset is composed of
         approximately 3000 images for each color class, sourced from our e-commerce datasets. The models undergo training to adeptly edit
@@ -113,6 +118,18 @@ export const projects = [
     ],
     src: login,
     images: [
+      {
+        src: login,
+      },
+      {
+        src: login,
+      },
+      {
+        src: login,
+      },
+      {
+        src: login,
+      },
       {
         src: login,
       },

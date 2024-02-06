@@ -5,7 +5,8 @@ import { styles } from "../styles";
 import logo from "../Images/logo.png";
 import { HiMenu } from "react-icons/hi";
 import { IoIosClose } from "react-icons/io";
-import {animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
+import { FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
   const { active, setActive } = useState("");
@@ -29,22 +30,20 @@ const Navbar = () => {
             Usman Manzoor <span className="sm: hidden"> | Web Developer</span>
           </p>
         </Link>
-        <ul className="list-none hidden  sm:flex flex-row gap-10">
-          {navLinks.map((link) => {
-            return (
-                <li
-                  key={link.id}
-                  className={`${
-                    active === link.title ? "text-white" : "text-[#bdbdbd]"
-                  }
-                hover:text-white hover:scale-105  text-[1rem] font-medium cursor-pointer duration-100`}
-                  onClick={() => setActive(link.title)}
-                >
-                  <a href={`${link.id}`}>{link.title}</a>
-                </li>
-            );
-          })}
-        </ul>
+        <div className="list-none hidden  sm:flex flex-row gap-10">
+          <a href="#" target="_blank" rel="noopener noreferrer" className="">
+            <FaGithub className=" text-[#e4e4e4] hover:text-white text-[2rem] cursor-pointer" />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" className="">
+            <FaGithub className=" text-[#e4e4e4] hover:text-white text-[2rem] cursor-pointer" />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" className="">
+            <FaGithub className=" text-[#e4e4e4] hover:text-white text-[2rem] cursor-pointer" />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" className="">
+            <FaGithub className=" text-[#e4e4e4] hover:text-white text-[2rem] cursor-pointer" />
+          </a>
+        </div>
 
         <div className="sm:hidden flex felx-1 justify-end items-center">
           {toggle ? (
@@ -61,28 +60,33 @@ const Navbar = () => {
 
           <div
             className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 bg-[#5c29ca] border-[#ffffffcc] border-[.1rem] absolute top-20 right-3 mx-4 my-2 w-[10rem] rounded-lg`}
+              !toggle ? "hidden" : "flex flex-col items-center justify-center gap-y-[3rem]"
+            } p-6 bg-[#161616] border-[#ffffffcc] border-[.1rem] absolute top-20 right-3 mx-4 my-2 w-max h-max rounded-lg`}
           >
-            {" "}
-            <ul className="list-none flex items-start flex-col gap-7">
-              {navLinks.map((link) => {
-                return (
-                  <li
-                    key={link.id}
-                    className={`${
-                      active === link.title ? "text-white" : ""
-                    } hover:text-white text-[.9rem] font-medium cursor-pointer duration-100`}
-                    onClick={() => {
-                      setToggle(!toggle);
-                      setActive(link.title);
-                    }}
-                  >
-                    <a href={`${link.id}`}>{link.title}</a>
-                  </li>
-                );
-              })}
-            </ul>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=""
+              >
+                <FaGithub className=" text-[#e4e4e4] hover:text-white text-[2rem] cursor-pointer" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=""
+              >
+                <FaGithub className=" text-[#e4e4e4] hover:text-white text-[2rem] cursor-pointer" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=""
+              >
+                <FaGithub className=" text-[#e4e4e4] hover:text-white text-[2rem] cursor-pointer" />
+              </a>
           </div>
         </div>
       </div>

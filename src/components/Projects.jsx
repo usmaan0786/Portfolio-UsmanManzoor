@@ -5,6 +5,8 @@ import { styles } from "../styles";
 import { projects } from "../Database/Data";
 import { fadeIn, textVariant } from "../utils/motion";
 import { FaGithub } from "react-icons/fa";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 const Projects = () => {
   const [read, setRead] = useState(false);
@@ -62,9 +64,11 @@ const Projects = () => {
                   <img
                     src={iter.images[0].src}
                     alt="images"
-                    className="rounded-xl "
+                    className="rounded-xl h-[12rem] "
                   />
-                  <p className="absolute right-2 my-[.5rem] font-light text-[#ffb157]">{iter.category}</p>
+                  <p className="absolute right-2 my-[.5rem] font-light text-[#ffb157]">
+                    {iter.category}
+                  </p>
                 </div>
 
                 <div className="mt-[.5rem]">
@@ -87,11 +91,63 @@ const Projects = () => {
                 {read ? (
                   <div className="fixed inset-0 z-50 flex items-center justify-center">
                     <div
-                      className="absolute inset-0 bg-black opacity-50"
+                      className="absolute inset-0 bg-black opacity-50 "
                       onClick={handleBackgroundClick}
                     ></div>
-                    <div className="z-10 h-[50rem] w-[50rem] bg-slate-400 p-8 rounded-lg m-2 lg:m-0">
-                      {/* Your popup content goes here */}
+                    <div className=" overflow-y-auto z-10 h-[50rem] w-[70rem] bg-[#ffffff] text-[#111] flex flex-col p-4 rounded-lg m-2 lg:m-0 gap-y-[.5rem]">
+                      <h1 className="text-[1.3rem] font-bold">{iter.name}</h1>
+                      <div className="flex justify-between">
+                        <p>
+                          Tech Stack :{" "}
+                          <span className="italic">{iter.TechStack}</span>{" "}
+                        </p>
+                        <p>{iter.Duration}</p>
+                      </div>
+
+                      <ul className="list-disc ml-[1rem]">
+                        {iter.bullets.map((temp, index) => {
+                          return <li className="my-[.3rem]">{temp.point}</li>;
+                        })}
+                      </ul>
+
+                      <h1 className="font-bold">Project Images</h1>
+                      <div className="mt-[2rem]">
+                        <Splide
+                          className=""
+                          options={{
+                            perPage: 1,
+                            gap: ".1rem",
+                            grag: "free",
+                            arrows: true,
+                          }}
+                        >
+                          {iter.images.map((currElem) => {
+                            return (
+                              <SplideSlide
+                                key={currElem.id}
+                                className="w-[20rem] flex justify-center items-center"
+                              >
+                                <img
+                                  src={currElem.src}
+                                  alt="projectImages"
+                                  className="w-[45rem]"
+                                />
+                              </SplideSlide>
+                            );
+                          })}
+                        </Splide>
+                      </div>
+
+                      <div>
+                        <a
+                          href={iter.source_code}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex justify-center items-center gap-x-4 mt-[1rem]"
+                        >
+                           <p>Get Help from the code : </p><FaGithub className=" text-[#414141] hover:text-[#000000] text-[2rem] cursor-pointer" />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 ) : null}
