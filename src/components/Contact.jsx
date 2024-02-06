@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
 import EarthCanvas from "./canvas/EarthCanvas";
@@ -72,7 +71,7 @@ const Contact = () => {
           variants={slideIn("right", "tween", 0.2, 1)}
           className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
         >
-          <EarthCanvas />
+          {/* <EarthCanvas /> */}
         </motion.div>
       </div>
     </>
