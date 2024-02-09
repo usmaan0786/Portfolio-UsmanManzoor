@@ -1,5 +1,33 @@
 import react from "../Images/SkillsIcons/react.png";
-import login from "../Images/Projects/DynamicAuthPortal/login.png";
+import js from "../Images/SkillsIcons/js.png";
+import redux from "../Images/SkillsIcons/redux.png";
+import mongodb from "../Images/SkillsIcons/mongodb.png";
+import mysql from "../Images/SkillsIcons/mysql.png";
+import github from "../Images/SkillsIcons/github.png";
+import contextApi from "../Images/SkillsIcons/contextApi.png";
+import RestApi from "../Images/SkillsIcons/RestApi.png";
+import html from "../Images/SkillsIcons/html.png";
+import css from "../Images/SkillsIcons/css.png";
+import tailwindCss from "../Images/SkillsIcons/tailwindCss.png";
+import threejs from "../Images/SkillsIcons/threejs.png";
+import bootstrap from "../Images/SkillsIcons/bootstrap.png";
+import nodejs from "../Images/SkillsIcons/nodejs.png";
+import expressjs from "../Images/SkillsIcons/expressjs.png";
+import python from "../Images/SkillsIcons/python.png";
+import php from "../Images/SkillsIcons/php.png";
+import postman from "../Images/SkillsIcons/postman.png";
+import canva from "../Images/SkillsIcons/canva.png";
+
+import loginAuth, {
+  homeAuth,
+  signupAuth,
+  aboutAuth,
+  fyp1,
+  fyp3,
+  fyp4,
+  fyp5,
+  fyp2,
+} from "../Images";
 
 export const navLinks = [
   {
@@ -37,64 +65,80 @@ export const services = [
 
 export const technologies = [
   {
-    name: "HTML 5",
+    name: "Javascript",
+    icon: js,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "php",
+    icon: php,
+  },
+  {
+    name: "React",
     icon: react,
   },
   {
-    name: "CSS 3",
-    icon: react,
+    name: "Redux",
+    icon: redux,
   },
   {
-    name: "JavaScript",
-    icon: react,
+    name: "Node.js",
+    icon: nodejs,
   },
   {
-    name: "HTML 5",
-    icon: react,
+    name: "Expree.js",
+    icon: expressjs,
   },
   {
-    name: "CSS 3",
-    icon: react,
+    name: "HTML",
+    icon: html,
   },
   {
-    name: "JavaScript",
-    icon: react,
+    name: "CSS",
+    icon: css,
   },
   {
-    name: "HTML 5",
-    icon: react,
+    name: "Tailwind CSS",
+    icon: tailwindCss,
   },
   {
-    name: "CSS 3",
-    icon: react,
+    name: "MongoDB",
+    icon: mongodb,
   },
   {
-    name: "JavaScript",
-    icon: react,
+    name: "MySQL",
+    icon: mysql,
   },
   {
-    name: "HTML 5",
-    icon: react,
+    name: "Three.js",
+    icon: threejs,
   },
   {
-    name: "CSS 3",
-    icon: react,
+    name: "Bootstrap",
+    icon: bootstrap,
   },
   {
-    name: "JavaScript",
-    icon: react,
+    name: "ContextAPI",
+    icon: contextApi,
   },
   {
-    name: "HTML 5",
-    icon: react,
+    name: "REST API",
+    icon: RestApi,
   },
   {
-    name: "CSS 3",
-    icon: react,
+    name: "Postman",
+    icon: postman,
   },
   {
-    name: "JavaScript",
-    icon: react,
+    name: "Canva",
+    icon: canva,
+  },
+  {
+    name: "Github",
+    icon: github,
   },
 ];
 
@@ -102,8 +146,8 @@ export const projects = [
   {
     name: "FYP-Class Based Image Editing",
     Duration: "January 2023- December 2023",
-    TechStack: "Python, GANs, cGANs",
-    category: "MERN",
+    TechStack: "Python, GANs, cGANs Cycle GANs, Streamlit, Keras, Tensorflow, Jupyter Notebook, Ecommerce Dataset",
+    category: "AI/ML",
     description: `We have introduced an approach for image editing that operates on human specified labels. When presented with an input image along 
     with labels, our model accurately follows these instructions to carry out edits.`,
     bullets: [
@@ -120,65 +164,69 @@ export const projects = [
         personalized approach for each color—be it green, red, black, or blue.`,
       },
     ],
-    src: login,
+    src: loginAuth,
     images: [
       {
-        src: login,
+        src: fyp1,
       },
       {
-        src: login,
+        src: fyp2,
       },
       {
-        src: login,
+        src: fyp3,
       },
       {
-        src: login,
+        src: fyp4,
       },
       {
-        src: login,
+        src: fyp5,
       },
     ],
     source_code: "https://github.com/usmaan0786/FYP-Class-Based-Image-Editing",
   },
   {
-    name: "FYP-Class Based Image Editing",
-    Duration: "January 2023- December 2023",
-    TechStack: "Python, GANs, cGANs",
+    name: "Dynamic AuthPortal",
+    Duration: "January 2024- January 2024",
+    TechStack: "React, Node.js, Express.js, MongoDB",
     category: "MERN",
-    description: `We have introduced an approach for image editing that operates on human specified labels. When presented with an input image along 
-    with labels, our model accurately follows these instructions to carry out edits.`,
+    description: `In this project, I've leveraged the power of the MERN stack, incorporating MongoDB for data storage, Express.js and Node.js for the backend, and
+    React.js for a dynamic and responsive frontend. Dynamic Home, About Us, and other pages User-friendly signup and login pages.`,
     bullets: [
       {
-        point: `We have introduced an approach for image editing that operates on human specified labels. When presented with an input image along
-        with labels, our model accurately follows these instructions to carry out edits.`,
+        point: `In this project, I've leveraged the power of the MERN stack, incorporating MongoDB for data storage, Express.js and Node.js for the backend, and React.js for a dynamic and responsive frontend. Dynamic Home, About Us, and other pages User-friendly signup and login pages.`,
       },
       {
-        point: ` To create our training dataset, we utilize Generative
-        Adversarial Networks (GANs), specifically employing Conditional GANs and CycleGANs models. In this project, our primary focus revolves
-        around manipulating colors, seamlessly transitioning between green, red, black, and blue tones. Our training dataset is composed of
-        approximately 3000 images for each color class, sourced from our e-commerce datasets. The models undergo training to adeptly edit
-        input images, generating precise and visually appealing outcomes. The editing process is guided by the conditioned label, ensuring a
-        personalized approach for each color—be it green, red, black, or blue.`,
+        point: `Utilized REST API and POSTMAN for seamless. Utilized Fetch API for efficient data retrieval. Implemented routing for seamless navigation within
+        the application.`,
+      },
+      {
+        point: `Generated and stored JWT in the database. Stored the token in cookies for improved security.`,
+      },
+      {
+        point: `Verified user identity through token in cookies. Token generation on user login.`,
+      },
+      {
+        point: `Implemented login routes to control user access. Restricted access to home and about us pages for non-logged-in users.`,
+      },
+      {
+        point: `Dynamic data rendering after user authentication.`,
       },
     ],
-    src: login,
+    src: loginAuth,
     images: [
       {
-        src: login,
+        src: loginAuth,
       },
       {
-        src: login,
+        src: signupAuth,
       },
       {
-        src: login,
+        src: aboutAuth,
       },
       {
-        src: login,
-      },
-      {
-        src: login,
+        src: homeAuth,
       },
     ],
-    source_code: "https://github.com/usmaan0786/FYP-Class-Based-Image-Editing",
+    source_code: "https://github.com/usmaan0786/MERN-Stack-Project-01",
   },
 ];

@@ -4,7 +4,6 @@ import { styles } from "../styles";
 import logo from "../Images/logo.png";
 import { HiMenu } from "react-icons/hi";
 import { IoIosClose } from "react-icons/io";
-import { FaGithub } from "react-icons/fa";
 import { navLinks } from "../Database/Data";
 
 const Navbar = () => {
@@ -51,7 +50,7 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-[#ff9b9bcc]" : "text-[#ffffff]"
+                active === nav.title ? "text-[#00d9ffcc]" : "text-[#ffffff]"
               } hover:text-[#52a3ff] duration-100 text-[1rem] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >

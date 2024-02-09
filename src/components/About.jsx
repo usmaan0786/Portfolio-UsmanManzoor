@@ -8,7 +8,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 const About = () => {
   return (
     <>
-      <div className="lg:mx-[20rem] mt-[3rem] lg:mt-0">
+      <div className="lg:mx-[20rem] mt-[5rem] lg:mt-0">
         <div className="px-[1rem] lg:px-0">
           <motion.div variants={textVariant()} className="">
             <p className={styles.sectionSubText}>Introduction</p>
@@ -16,13 +16,13 @@ const About = () => {
           </motion.div>
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
-            className="mt-4 lg:text-[1rem] text-[.9rem]"
+            className="mt-4 lg:text-[1rem] text-[.9rem] text-justify"
           >
-            I am a Skilled software Developer with Experience in typescript and
-            javascript Experience in frameworks like react, nodejs and three.js
-            i am a quick learner and collaborate coselly with clients to create
-            efficent scalbale user friendly solution that solve real worls
-            probelms let's work together to bring your idea to life.
+            I am a Skilled software Developer having strong passion in following
+            Stack and Tech. I am familiar with React, Node.js, Express.js and
+            MongoDB i am a quick learner and collaborate coselly with clients to
+            create efficent scalbale user friendly solution that solve real
+            worls probelms let's work together to bring your idea to life.
           </motion.p>
         </div>
 

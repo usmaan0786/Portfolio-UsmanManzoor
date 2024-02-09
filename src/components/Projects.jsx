@@ -11,15 +11,18 @@ import "@splidejs/react-splide/css";
 const Projects = () => {
   const [read, setRead] = useState(false);
 
-  const handleClick = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(null);
+
+  const handleClick = (iter, index) => {
+    setSelectedProject(iter);
+    setSelectedProjectIndex(index);
     setRead(!read);
   };
 
   const handleBackgroundClick = () => {
     setRead(false);
   };
-
-  console.log("Projects = ", projects);
 
   return (
     <>
@@ -31,20 +34,20 @@ const Projects = () => {
           </motion.div>
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
-            className="mt-4 lg:text-[1rem] text-[.9rem]"
+            className="mt-4 lg:text-[1rem] text-[.9rem] text-justify"
           >
-            I am a Skilled software Developer with Experience in typescript and
-            javascript Experience in frameworks like react, nodejs and three.js
-            i am a quick learner and collaborate coselly with clients to create
-            efficent scalbale user friendly solution that solve real worls
-            probelms let's work together to bring your idea to life.
+            The following projects provide a demonstration of my skills and
+            technological growth.
           </motion.p>
         </div>
       </div>
       <div className="mt-[2rem] flex flex-wrap lg:gap-10 justify-center lg:mx-[10rem]">
         {projects.map((iter, index) => {
           return (
-            <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+            <motion.div
+              variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+              key={iter.name}
+            >
               <Tilt
                 options={{
                   max: 45,
@@ -59,13 +62,16 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaGithub className="absolute text-[#414141] hover:text-[#000000] right-1 top-1 lg:text-[2.3rem] text-[2rem] cursor-pointer" />
+                    <FaGithub className="absolute text-[#9e9e9e] hover:text-[#575757] right-1 top-1 lg:text-[2.3rem] text-[2rem] cursor-pointer" />
                   </a>
-                  <img
-                    src={iter.images[0].src}
-                    alt="images"
-                    className="rounded-xl h-[12rem] "
-                  />
+                  <div className="flex items-center justify-center">
+                    <img
+                      src={iter.images[0].src}
+                      alt="images"
+                      className="rounded-xl h-[12rem] "
+                    />
+                  </div>
+
                   <p className="absolute lg:right-2 my-[.5rem] font-light text-[#ffb157]">
                     {iter.category}
                   </p>
@@ -81,7 +87,7 @@ const Projects = () => {
 
                   <p
                     className="underline mt-[.5rem] cursor-pointer text-[.9rem] hover:text-[#52a3ff] duration-100"
-                    onClick={handleClick}
+                    onClick={() => handleClick(iter, index)}
                   >
                     Read More
                   </p>
@@ -95,23 +101,23 @@ const Projects = () => {
                       onClick={handleBackgroundClick}
                     ></div>
                     <div className=" overflow-y-auto z-10 h-[40rem] lg:h-[50rem] lg:w-[70rem] w-[22rem] bg-[#ffffff] text-[#111] flex flex-col p-4 rounded-lg m-2 lg:m-0 gap-y-[.5rem]">
-                      <h1 className="text-[1.3rem] font-bold">{iter.name}</h1>
+                      <h1 className="text-[1.3rem] font-bold">{selectedProject.name}</h1>
                       <div className="flex lg:flex-row flex-col-reverse justify-between">
                         <p className="mt-[.7rem] lg:mt-0">
                           Tech Stack :{" "}
-                          <span className="italic ">{iter.TechStack}</span>{" "}
+                          <span className="italic ">{selectedProject.TechStack}</span>{" "}
                         </p>
-                        <p>{iter.Duration}</p>
+                        <p>{selectedProject.Duration}</p>
                       </div>
 
                       <ul className="list-disc ml-[1rem]">
-                        {iter.bullets.map((temp, index) => {
+                        {selectedProject.bullets.map((temp, index) => {
                           return <li className="my-[.3rem]">{temp.point}</li>;
                         })}
                       </ul>
 
                       <h1 className="font-bold">Project Images</h1>
-                      <div className="mt-[2rem]">
+                      <div className="mt-[1rem]">
                         <Splide
                           className=""
                           options={{
@@ -121,16 +127,16 @@ const Projects = () => {
                             arrows: true,
                           }}
                         >
-                          {iter.images.map((currElem) => {
+                          {selectedProject.images.map((currElem) => {
                             return (
                               <SplideSlide
                                 key={currElem.id}
-                                className="w-[20rem] flex justify-center items-center"
+                                className="w-[20rem] lg:h-[25rem] flex justify-center"
                               >
                                 <img
                                   src={currElem.src}
                                   alt="projectImages"
-                                  className="w-[45rem]"
+                                  className="w-[45rem]" 
                                 />
                               </SplideSlide>
                             );
@@ -140,12 +146,15 @@ const Projects = () => {
 
                       <div>
                         <a
-                          href={iter.source_code}
+                          href={selectedProject.source_code}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex justify-center items-center gap-x-4 mt-[1rem]"
                         >
-                           <p className="text-[.9rem] lg:text-[1rem]">Project Code Link : </p><FaGithub className=" text-[#414141] hover:text-[#000000] text-[2rem] cursor-pointer" />
+                          <p className="text-[.9rem] lg:text-[1rem]">
+                            Project Code Link :{" "}
+                          </p>
+                          <FaGithub className=" text-[#414141] hover:text-[#000000] text-[2rem] cursor-pointer" />
                         </a>
                       </div>
                     </div>

@@ -11,22 +11,27 @@ const Hero = () => {
       <div
         className={`${styles.paddingX} absolute inset-0 top-[10rem] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
-        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-x-2">
+        <div className="flex flex-col-reverse lg:flex-row justify-center items-center lg:items-start gap-x-2">
           <div className="lg:mt-[3rem]">
             <h1 className={`${styles.heroHeadText} text-[#ffffff]`}>
               Hi, I'm
-              <span className={`${styles.heroHeadText} text-[#52a3ff] ml-[.5rem] text-[1.7rem]`}>
+              <span
+                className={`${styles.heroHeadText} text-[#52a3ff] ml-[.5rem] text-[1.7rem]`}
+              >
                 Usman Manzoor
               </span>
             </h1>
 
             <p
-              className={`${styles.heroSubText} mt-2 text-[#ffffff] text-justify`}
+              className={`${styles.heroSubText} mt-2 text-[#ffffff] text-justify lg:w-[45rem]`}
             >
-              As a freshman with a BS in Computer Science from the FAST National
-              University of Computer and Emerging Sciences.I am a quick learner
-              with strong basics. Currently, I am actively seeking job
-              opportunities with my keen interest in Web Development.
+              As a freshman with a strong passion for MERN Stack development
+              just completed my bachelor's in Computer Science from FAST
+              National University of Computer and Emerging Sciences. Throughout
+              my academic journey, I've gained proficiency in various
+              programming languages and technologies. I consider myself a quick
+              learner with a strong foundation, and I aspire to become a
+              competitive developer in the market.
             </p>
           </div>
           <Tilt>
@@ -41,7 +46,7 @@ const Hero = () => {
                 <img
                   src={usman}
                   alt="UsmanPic"
-                  className="lg:w-[80rem] w-[15rem] mt-[2rem] lg:mt-0 hover:scale-105 duration-200"
+                  className="lg:w-[80rem] w-[12rem] lg:mt-0 hover:scale-105 duration-200 rounded-full"
                 />
               </div>
             </motion.div>
