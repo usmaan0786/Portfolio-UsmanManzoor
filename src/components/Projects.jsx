@@ -101,18 +101,22 @@ const Projects = () => {
                       onClick={handleBackgroundClick}
                     ></div>
                     <div className=" overflow-y-auto z-10 h-[40rem] lg:h-[50rem] lg:w-[70rem] w-[22rem] bg-[#ffffff] text-[#111] flex flex-col p-4 rounded-lg m-2 lg:m-0 gap-y-[.5rem]">
-                      <h1 className="text-[1.3rem] font-bold">{selectedProject.name}</h1>
+                      <h1 className="text-[1.3rem] font-bold">
+                        {selectedProject.name}
+                      </h1>
                       <div className="flex lg:flex-row flex-col-reverse justify-between">
-                        <p className="mt-[.7rem] lg:mt-0">
+                        <p className="mt-[.7rem] lg:mt-0 lg:w-[50rem] text-justify">
                           Tech Stack :{" "}
-                          <span className="italic ">{selectedProject.TechStack}</span>{" "}
+                          <span className="italic  ">
+                            {selectedProject.TechStack}
+                          </span>{" "}
                         </p>
-                        <p>{selectedProject.Duration}</p>
+                        <p className="font-medium">{selectedProject.Duration}</p>
                       </div>
 
                       <ul className="list-disc ml-[1rem]">
                         {selectedProject.bullets.map((temp, index) => {
-                          return <li className="my-[.3rem]">{temp.point}</li>;
+                          return <li className="my-[.3rem] text-justify">{temp.point}</li>;
                         })}
                       </ul>
 
@@ -136,7 +140,7 @@ const Projects = () => {
                                 <img
                                   src={currElem.src}
                                   alt="projectImages"
-                                  className="w-[45rem]" 
+                                  className="w-[45rem]"
                                 />
                               </SplideSlide>
                             );
