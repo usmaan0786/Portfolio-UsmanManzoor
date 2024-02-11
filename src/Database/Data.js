@@ -27,6 +27,12 @@ import loginAuth, {
   fyp4,
   fyp5,
   fyp2,
+  f1,
+  f2,
+  f3,
+  f4,
+  f5,
+  f6,
 } from "../Images";
 
 export const navLinks = [
@@ -50,13 +56,7 @@ export const navLinks = [
 
 export const services = [
   {
-    title: "Web Development",
-  },
-  {
     title: "MERN Stack Development",
-  },
-  {
-    title: "React Development",
   },
   {
     title: "Frontend Development",
@@ -152,7 +152,8 @@ export const projects = [
   {
     name: "FYP-Class Based Image Editing",
     Duration: "January 2023- December 2023",
-    TechStack: "Python, GANs, cGANs Cycle GANs, Streamlit, Keras, Tensorflow, Jupyter Notebook, Ecommerce Dataset",
+    TechStack:
+      "Python, GANs, cGANs Cycle GANs, Streamlit, Keras, Tensorflow, Jupyter Notebook, Ecommerce Dataset",
     category: "AI/ML",
     description: `We have introduced an approach for image editing that operates on human specified labels. When presented with an input image along 
     with labels, our model accurately follows these instructions to carry out edits.`,
@@ -234,5 +235,60 @@ export const projects = [
       },
     ],
     source_code: "https://github.com/usmaan0786/MERN-Stack-Project-01",
+  },
+  {
+    name: "Filmflare Movies",
+    Duration: "December 2023 - December 2023",
+    TechStack: "React, Redux, Tailwind CSS, TMDB API, Axios, Props, Hooks",
+    category: "React",
+    description: `This React project serves as an advanced movie exploration platform, leveraging the TMDB API. Users effortlessly navigate popular, top-rated, and upcoming movies, accessing detailed information like cast, genres, and personalized recommendations.`,
+    bullets: [
+      {
+        point: `This React project serves as an advanced movie exploration platform, leveraging the TMDB API. Users effortlessly navigate popular, top-rated, and upcoming movies, accessing detailed information like cast, genres, and personalized recommendations.
+        `,
+      },
+      {
+        point: `The application features dynamic actor pages with biographies and a carefully curated filmography. 
+       `,
+      },
+      {
+        point: ` Its precise search functionality enhances user interaction.
+       `,
+      },
+      {
+        point: ` Redux and React hooks (useState, useEffect, useParams) efficiently manage states for a seamless user experience.
+       `,
+      },
+      {
+        point: ` Crafted with Tailwind CSS, the interface is stylish and responsive.
+       `,
+      },
+      {
+        point: ` Real-time TMDB API integration ensures comprehensive and up-to-date movie details. Redux and React Router contribute to smooth component interaction and seamless navigation across pages.`,
+      },
+    ],
+    src: loginAuth,
+    images: [
+      {
+        src: f1,
+      },
+      {
+        src: f2,
+      },
+      {
+        src: f3,
+      },
+      {
+        src: f4,
+      },
+      {
+        src: f5,
+      },
+      {
+        src: f6,
+      },
+    ],
+    source_code:
+      "https://github.com/usmaan0786/React-FilmFlare-Movie-Application",
   },
 ];

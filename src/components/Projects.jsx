@@ -17,10 +17,15 @@ const Projects = () => {
   const handleClick = (iter, index) => {
     setSelectedProject(iter);
     setSelectedProjectIndex(index);
+
+    document.body.style.overflow = "hidden";
+
     setRead(!read);
   };
 
   const handleBackgroundClick = () => {
+    document.body.style.overflow = "auto";
+
     setRead(false);
   };
 
@@ -54,7 +59,13 @@ const Projects = () => {
                   scale: 1,
                   speed: 450,
                 }}
-                className="bg-[#170b31] p-2 rounded-xl m-[2rem] lg:m-0 lg:w-[23rem] w-[21rem] h-[32rem] lg:h-[30rem] border-[.1rem] border-[#f4c7ff]"
+                // bg-[#170b31] p-2 rounded-xl m-[2rem] lg:m-0 lg:w-[23rem] w-[21rem] h-[32rem] lg:h-[30rem] border-[.1rem] border-[#f4c7ff]
+                className={`p-2 rounded-xl m-[2rem] lg:m-0 lg:w-[23rem] w-[21rem] h-[32rem] lg:h-[30rem] border-[.1rem] ${
+                      iter.category === "MERN"
+                    ? ` bg-gradient-to-b  from-[#52a3ff]  to-transparent`
+                    : iter.category === "AI/ML"
+                    ? `bg-gradient-to-b  from-[#896eff]  to-transparent`
+                    : `bg-gradient-to-b  from-[#5bffce]  to-transparent` }`}
               >
                 <div className="relative w-full">
                   <a
@@ -62,7 +73,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaGithub className="absolute text-[#9e9e9e] hover:text-[#575757] right-1 top-1 lg:text-[2.3rem] text-[2rem] cursor-pointer" />
+                    <FaGithub className="absolute text-[#646464] hover:text-[#161616] bg-white rounded-full right-1 top-1 lg:text-[2.3rem] text-[2rem] cursor-pointer" />
                   </a>
                   <div className="flex items-center justify-center">
                     <img
@@ -72,7 +83,7 @@ const Projects = () => {
                     />
                   </div>
 
-                  <p className="absolute lg:right-2 my-[.5rem] font-light text-[#ffb157]">
+                  <p className="absolute lg:right-2 my-[.5rem] font-medium text-[#ffea2b]">
                     {iter.category}
                   </p>
                 </div>
@@ -111,12 +122,18 @@ const Projects = () => {
                             {selectedProject.TechStack}
                           </span>{" "}
                         </p>
-                        <p className="font-medium">{selectedProject.Duration}</p>
+                        <p className="font-medium">
+                          {selectedProject.Duration}
+                        </p>
                       </div>
 
                       <ul className="list-disc ml-[1rem]">
                         {selectedProject.bullets.map((temp, index) => {
-                          return <li className="my-[.3rem] text-justify">{temp.point}</li>;
+                          return (
+                            <li className="my-[.3rem] text-justify">
+                              {temp.point}
+                            </li>
+                          );
                         })}
                       </ul>
 

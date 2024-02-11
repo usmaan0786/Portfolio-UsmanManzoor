@@ -61,7 +61,7 @@ const Contact = () => {
                   rows={"4"}
                   required
                 />
-                <button className="bg-gradient-to-b  from-[#67c2ff] to-[rgb(198,11,255)] w-max lg:p-[.9rem] p-[.7rem] rounded-xl lg:px-[1.4rem] px-[1.2rem] lg:text-[1.1rem] text-[.9rem] font-medium hover:from-[#f6ff7a] hover:to-[rgb(121,182,41)] duration-200">Send</button>
+                <button className="bg-gradient-to-b  from-[#67c2ff] to-[rgb(198,11,255)] w-max lg:p-[.9rem] p-[.7rem] rounded-[.5rem] lg:px-[1.4rem] px-[1.2rem] lg:text-[1.1rem] text-[.9rem] font-medium hover:from-[#f6ff7a] hover:to-[rgb(121,182,41)] duration-200">Send</button>
               </form>
             </div>
           </motion.div>
@@ -71,7 +71,7 @@ const Contact = () => {
           variants={slideIn("right", "tween", 0.2, 1)}
           className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
         >
-          <EarthCanvas />
+          {/* <EarthCanvas /> */}
         </motion.div>
       </div>
     </>
