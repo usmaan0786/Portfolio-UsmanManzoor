@@ -5,7 +5,7 @@ import Insta from "../Images/ContactMe/instagram.png";
 
 const SideContact = () => {
   return (
-    <div className="flex flex-col ml-[1rem] gap-9 justify-center items-center">
+    <div className=" flex flex-col ml-[1rem] gap-9 justify-center items-center">
         <a
           href="https://github.com/usmaan0786"
           target="_blank"
@@ -15,7 +15,7 @@ const SideContact = () => {
           <img
             src={Github}
             alt="Github"
-            className="w-[2.5rem] "
+            className="w-[2rem] "
           />
         </a>
 
@@ -28,7 +28,7 @@ const SideContact = () => {
           <img
             src={LinkedIn}
             alt="LinkedIn"
-            className="w-[2.5rem] "
+            className="w-[2rem] "
           />
         </a>
         <a
@@ -40,7 +40,7 @@ const SideContact = () => {
           <img
             src={Insta}
             alt="instagram"
-            className="w-[2.5rem] "
+            className="w-[2rem] "
           />
         </a>
       </div>

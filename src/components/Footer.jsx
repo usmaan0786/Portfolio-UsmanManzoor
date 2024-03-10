@@ -19,7 +19,7 @@ const Footer = () => {
           <img
             src={Github}
             alt="Github"
-            className="w-[2.5rem] cursor-pointer opacity-80 hover:opacity-100 duration-150"
+            className="w-[2rem] cursor-pointer opacity-80 hover:opacity-100 duration-150"
           />
         </a>
 
@@ -32,7 +32,7 @@ const Footer = () => {
           <img
             src={LinkedIn}
             alt="LinkedIn"
-            className="w-[2.5rem] cursor-pointer opacity-80 hover:opacity-100 duration-150"
+            className="w-[2rem] cursor-pointer opacity-80 hover:opacity-100 duration-150"
           />
         </a>
         <a
@@ -44,7 +44,7 @@ const Footer = () => {
           <img
             src={Insta}
             alt="instagram"
-            className="w-[2.5rem] cursor-pointer opacity-80 hover:opacity-100 duration-150"
+            className="w-[2rem] cursor-pointer opacity-80 hover:opacity-100 duration-150"
           />
         </a>
       </div>

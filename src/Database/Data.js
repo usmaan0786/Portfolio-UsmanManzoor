@@ -30,7 +30,6 @@ import loginAuth, {
   f1,
   f2,
   f3,
-  f4,
   f5,
   f6,
 } from "../Images";
@@ -150,25 +149,34 @@ export const technologies = [
 
 export const projects = [
   {
-    name: "FYP-Class Based Image Editing",
-    Duration: "January 2023- December 2023",
+    name: "Class Based Image Editing",
+    Duration: "Jan 2023- Dec 2023",
     TechStack:
       "Python, GANs, cGANs Cycle GANs, Streamlit, Keras, Tensorflow, Jupyter Notebook, Ecommerce Dataset",
     category: "AI/ML",
-    description: `We have introduced an approach for image editing that operates on human specified labels. When presented with an input image along 
-    with labels, our model accurately follows these instructions to carry out edits.`,
+    description: `We have introduced an approach for image editing that operates on human specified labels. When presented with an input image
+    along with labels, our model accurately follows these instructions to carry out edits. We utilize Generative Adversarial Networks (GANs),
+    specifically employing Conditional GANs and CycleGANs models. In this project, our primary focus revolves around manipulating
+    colors, seamlessly transitioning between green, red, black, and blue tones.`,
     bullets: [
       {
-        point: `We have introduced an approach for image editing that operates on human specified labels. When presented with an input image along
-        with labels, our model accurately follows these instructions to carry out edits.`,
+        point: `We have introduced an approach for image editing that operates on human specified labels. When presented with an input image
+        along with labels, our model accurately follows these instructions to carry out edits. We utilize Generative Adversarial Networks (GANs),
+        specifically employing Conditional GANs and CycleGANs models. In this project, our primary focus revolves around manipulating
+        colors, seamlessly transitioning between green, red, black, and blue tones.
+        `,
       },
       {
-        point: ` To create our training dataset, we utilize Generative
-        Adversarial Networks (GANs), specifically employing Conditional GANs and CycleGANs models. In this project, our primary focus revolves
-        around manipulating colors, seamlessly transitioning between green, red, black, and blue tones. Our training dataset is composed of
-        approximately 3000 images for each color class, sourced from our e-commerce datasets. The models undergo training to adeptly edit
-        input images, generating precise and visually appealing outcomes. The editing process is guided by the conditioned label, ensuring a
-        personalized approach for each color—be it green, red, black, or blue.`,
+        point: ` Our training dataset is composed of approximately 3000 images for each color class, sourced from our e-commerce datasets.
+        `,
+      },
+      {
+        point: `The models undergo training to adeptly edit input images, generating precise and visually appealing outcomes.
+        `,
+      },
+      {
+        point: `The editing process is guided by the conditioned label, ensuring a personalized approach for each color—be it green, red, black, or
+      blue.`,
       },
     ],
     src: loginAuth,
@@ -200,23 +208,23 @@ export const projects = [
     React.js for a dynamic and responsive frontend. Dynamic Home, About Us, and other pages User-friendly signup and login pages.`,
     bullets: [
       {
-        point: `In this project, I've leveraged the power of the MERN stack, incorporating MongoDB for data storage, Express.js and Node.js for the backend, and React.js for a dynamic and responsive frontend. Dynamic Home, About Us, and other pages User-friendly signup and login pages.`,
+        point: `Created dynamic pages like Home and About Us, along with easy-to-use signup and login pages.`,
       },
       {
-        point: `Utilized REST API and POSTMAN for seamless. Utilized Fetch API for efficient data retrieval. Implemented routing for seamless navigation within
-        the application.`,
+        point: `Tested and retrieved data seamlessly using REST API with POSTMAN and Fetch API.`,
       },
       {
-        point: `Generated and stored JWT in the database. Stored the token in cookies for improved security.`,
+        point: `Implemented smooth navigation through routing within the app`,
       },
       {
-        point: `Verified user identity through token in cookies. Token generation on user login.`,
+        point: `Stored user data securely in an online database during registration, using bcryptjs for password encryption.`,
       },
       {
-        point: `Implemented login routes to control user access. Restricted access to home and about us pages for non-logged-in users.`,
+        point: `Enabled secure authentication using JWT, with tokens stored in cookies for added security.`,
       },
       {
-        point: `Dynamic data rendering after user authentication.`,
+        point: `Controlled user access with login routes, restricting non-logged-in users from accessing certain pages like Home and About Us. Rendered
+        data dynamically after user authentication`,
       },
     ],
     src: loginAuth,
@@ -256,14 +264,6 @@ export const projects = [
        `,
       },
       {
-        point: ` Redux and React hooks (useState, useEffect, useParams) efficiently manage states for a seamless user experience.
-       `,
-      },
-      {
-        point: ` Crafted with Tailwind CSS, the interface is stylish and responsive.
-       `,
-      },
-      {
         point: ` Real-time TMDB API integration ensures comprehensive and up-to-date movie details. Redux and React Router contribute to smooth component interaction and seamless navigation across pages.`,
       },
     ],
@@ -277,9 +277,6 @@ export const projects = [
       },
       {
         src: f3,
-      },
-      {
-        src: f4,
       },
       {
         src: f5,

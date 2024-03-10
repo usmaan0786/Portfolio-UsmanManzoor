@@ -9,12 +9,12 @@ import fastaLogo from "../Images/fastLogo.png";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-[52rem] mx-auto ">
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[5rem] max-w-7xl mx-auto flex flex-row items-start gap-5`}
+        className={`${styles.paddingX} absolute inset-0 top-[5rem] max-w-7xl mx-auto h-max flex flex-row items-start gap-5 `}
       >
-        <div className="flex flex-col-reverse lg:flex-row justify-center items-center lg:items-start gap-x-2]">
-          <div className="flex  flex-col gap-y-6">
+        <div className="flex flex-col-reverse lg:flex-row justify-center items-center lg:items-start gap-x-2] h-max">
+          <div className="flex flex-col gap-y-6 ">
             <div className="">
               <h1 className={`${styles.heroHeadText} text-[#ffffff]`}>
                 Hi, I'm
@@ -28,12 +28,12 @@ const Hero = () => {
               <p
                 className={`${styles.heroSubText} mt-2 text-[#ffffff] text-justify lg:w-[45rem]`}
               >
-                As a full stack web developer with a knowledge in software
-                development industry, Strong communication and problem-solving
-                skills with a bachelor's degree focused on computer science. I
-                am a quick learner with strong foundation in programming. Client
-                satisfaction and providing professional service are my top
-                priorities. I am confident that I can fulfill your expectations
+                As a computer science graduate, I am deeply passionate about
+                pursuing Full Stack development. Along my academic path, I've
+                gained proficiency in various programming languages and
+                technologies. I consider myself a quick learner with a strong
+                foundation, and I aspire to become a competitive developer in
+                the market.
               </p>
             </div>
 

@@ -26,7 +26,7 @@ function App() {
           <SideContact />
         </div>
         <div style={backgroundImageStyle}></div>
-        <div className="h-screen overflow-y">
+        <div className="overflow-y">
           <Navbar />
           <Hero />
         </div>
