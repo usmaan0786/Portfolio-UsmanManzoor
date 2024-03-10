@@ -62,10 +62,11 @@ const Projects = () => {
                 }}
                 className={`rounded-xl m-[2rem] lg:m-0 lg:w-[23rem] w-[21rem] h-[32rem] lg:h-[30rem] border-[.1rem] ${
                   iter.category === "MERN"
-                    ? ` bg-gradient-to-b  from-[#525eff] to-transparent`
+                    ? ` bg-gradient-to-b  from-[#0096d1]  to-transparent`
                     : iter.category === "AI/ML"
                     ? `bg-gradient-to-b  from-[#4c3f88]  to-transparent`
-                    : `bg-gradient-to-b  from-[#0096d1]  to-transparent`
+                    : `
+                    bg-gradient-to-b  from-[#525eff] to-transparent`
                 }`}
               >
                 <div className="relative w-full">
